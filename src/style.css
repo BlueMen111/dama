@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configurações globais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* Estilo do tabuleiro */
+#tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 0;
+  margin: 20px;
+  border: 2px solid #000;
+}
+
+/* Estilo das casas */
+.casa {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.casa.preta {
+  background-color: #555;
+}
+
+.casa.branca {
+  background-color: #fff;
+}
+
+/* Estilo das peças */
+.peca {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.peca.branca {
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.peca.preta {
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+.peca.dama {
+  background-color: gold;
+  border: 3px solid #000;
+}
+
+/* Estilo para o placar */
+#placar {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Para responsividade */
+@media (max-width: 600px) {
+  #tabuleiro {
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
+  }
+
+  .peca {
+    width: 30px;
+    height: 30px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+/* Coroa da dama */
+.coroa {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: gold;
+  border-radius: 50%;
+}
+
+
